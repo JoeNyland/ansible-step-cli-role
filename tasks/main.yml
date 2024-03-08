@@ -1,0 +1,11 @@
+---
+- name: Install Step CLI
+  become: true
+  tags:
+    - step
+    - step_cli
+  block:
+    - name: Install
+      apt:
+        deb: https://dl.smallstep.com/cli/docs-cli-install/latest/step-cli_amd64.deb
+
